@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Roboto, sans-serif;
+    color: #0e0e0e;
+    font-size: 12px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 55%;
+}
+
+.register-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "identity-fieldset photography-fieldset"
+        "address-fieldset address-fieldset"
+        "diverse-fieldset diverse-fieldset"
+        "buttons buttons";
+    gap: 16px;
+}
+
+.identity-fieldset {
+    grid-area: identity-fieldset;
+}
+
+.photography-fieldset {
+    grid-area: photography-fieldset;
+}
+
+.address-fieldset {
+    grid-area: address-fieldset;
+}
+
+.diverse-fieldset {
+    grid-area: diverse-fieldset;
+}
+
+.buttons-group {
+    grid-area: buttons;
+}
+
+fieldset {
+    padding: 16px;
+
+    display: grid;
+    gap: 16px;
+
+    border: 1px solid #0e0e0e;
+    border-radius: 4px;
+}
+
+.identity-fieldset {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "name-field name-field"
+        "rg-field cp-field"
+        "birth-day-field gender-field"
+        "password-field confirm-password-field";
+}
+
+legend {
+    padding: 0 5px;
+}
+
+.form-field {
+    height: min-content;
+}
+
+.form-field label {
+    display: block;
+
+    margin-left: 4px;
+    font-weight: 500;
+}
+
+.form-field input, .form-field select {
+    display: block;
+
+    width: 100%;
+
+    padding: 8px;
+
+    border: 1px solid #0e0e0e;
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    background-color: transparent;
+}
+
+.form-field.input-error label {
+    color: #f53434;
+}
+
+.form-field.input-error input {
+    border-color: #f53434;
+}
+
+.error-message {
+    color: #f53434;
+    display: none;
+}
+
+.form-field.input-error .error-message {
+    display: block;
+}
+
+.name-field {
+    grid-area: name-field;
+}
+
+.rg-field {
+    grid-area: rg-field;
+}
+
+.cpf-field {
+    grid-area: cpf-field;
+}
+
+.birth-day-field {
+    grid-area: birth-day-field;
+}
+
+.gender-field {
+    grid-area: gender-field;
+}
+
+.password-field {
+    grid-area: password-field;
+}
+
+.confirm-password-field {
+    grid-area: confirm-password-field;
+}
+
+.radio-inputs, .checkbox-inputs {
+    display: flex;
+    align-items: center;
+    
+    gap: 20px;
+}
+
+.radio-inputs {
+    height: 40px;
+}
+
+.radio-inputs div, .checkbox-inputs div {
+    display: flex;
+    gap: 4px;
+}
+
+.photography-fieldset {
+    height: 75%;
+    grid-template-columns: auto auto;
+}
+
+.photography {
+    width: 160px;
+    height: auto;
+}
+
+.button-send-archive {
+    padding: 8px;
+    width: 112px;
+    height: min-content;
+
+    color: #ffffff;
+    background-color: #bb1111;
+
+    border: none;
+    border-radius: 4px;
+
+    font-weight: 500;
+}
+
+.address-fieldset {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.road-field {
+    grid-column: span 6;
+}
+
+.house-number-field, .address-complement-field {
+    grid-column: span 3;
+}
+
+.district-field, .city-field, .state-field {
+    grid-column: span 4;
+}
+
+.diverse-fieldset {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.diverse-fieldset fieldset legend {
+    margin-left: -20px;
+}
+
+.preferred-color {
+    height: 22px;
+    width: 44px;
+    border: 1px solid transparent;
+    padding: 4px;
+}
+
+.preferred-color div {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+}
+
+.preferred-color-selected {
+    border-color: #0e0e0e;
+}
+
+.buttons {
+    grid-area: buttons;
+    display: inline-flex;
+    justify-content: end;
+    gap: 16px;
+    align-self: end;
+}
+
+.button {
+    padding: 16px;
+    width: 128px;
+
+    color: #ffffff;
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 14px;
+}
+
+.button-cancel {
+    background-color: #f53434;
+}
+
+.button-submit {
+    background-color: #11c314;
+}

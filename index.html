@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+
+    <form id="registerForm" class="register-form">
+
+      <!-- Identificação -->
+      <fieldset class="identity-fieldset">
+        <legend>Identificação</legend>
+
+        <!-- Nome Completo -->
+        <div class="form-field name-field">
+          <label for="fullName">Nome Completo: *</label>
+          <input type="text" name="fullName" id="fullName" placeholder="Digite seu nome">
+          <span class="error-message"></span>
+        </div>
+
+        <!-- RG -->
+        <div class="form-field rg-field">
+          <label for="rg">RG: *</label>
+          <input type="text" name="rg" id="rg" placeholder="0000000000">
+          <span class="error-message"></span>
+        </div>
+
+        <!-- CPF -->
+        <div class="form-field cp-field">
+          <label for="cpf">CPF: *</label>
+          <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00">
+          <span class="error-message"></span>
+        </div>
+
+        <!-- Data de Nascimento -->
+        <div class="form-field birth-day-field">
+          <label for="birthDate">Data de Nascimento: *</label>
+          <input type="date" name="birthDate" id="birthDate">
+          <span class="error-message"></span>
+        </div>
+
+        <!-- Sexo -->
+        <div class="form-field gender-field">
+          <label>Sexo: *</label>
+          <div class="radio-inputs">
+            <div>
+              <input type="radio" name="gender" id="maleGender" value="Masculino" checked>
+              <label for="maleGender">Masculino</label>
+            </div>
+            
+            <div>
+              <input type="radio" name="gender" id="feminineGender" value="Feminino">
+              <label for="feminineGender">Feminino</label>
+            </div>
+            
+            <div>
+              <input type="radio" name="gender" id="othersGender" value="Outros">
+              <label for="othersGender">Outros</label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Senha -->
+        <div class="form-field password-field">
+          <label for="password">Senha: *</label>
+          <input type="password" name="password" id="password" placeholder="Digite sua senha">
+          <span class="error-message"></span>
+        </div>
+        
+        <!-- Confirmação de Senha -->
+        <div class="form-field confirm-password-field">
+          <label for="confirmPassword">Confirmar Senha: *</label>
+          <input type="text" name="confirmPassword" id="confirmPassword" placeholder="Confirme sua senha">
+          <span class="error-message"></span>
+        </div>
+
+      </fieldset>
+
+      <!-- Fotografia -->
+       <fieldset class="photography-fieldset">
+        <legend>Fotografia</legend>
+
+        <img class="photography" src="assets/photo-default.jpg" alt="Foto do Usuário">
+        <input class="button-send-archive"  type="button" value="Enviar Arquivo">
+
+       </fieldset>
+
+      <!-- Endereço -->
+      <fieldset class="address-fieldset">
+        <legend>Endereço</legend>
+
+        <!-- Rua -->
+        <div class="form-field road-field">
+          <label for="road">Rua:</label>
+          <input type="text" name="road" id="road" placeholder="Digite sua rua">
+        </div>
+
+        <!-- Número -->
+        <div class="form-field house-number-field">
+          <label for="houseNumber">Número:</label>
+          <input type="text" name="houseNumber" id="houseNumber" placeholder="Digite seu número">
+        </div>
+
+        <!-- Complemento -->
+        <div class="form-field address-complement-field">
+          <label for="addressComplement">Complemento:</label>
+          <input type="text" name="addressComplement" id="addressComplement" placeholder="Digite o complemento">
+        </div>
+
+        <!-- Bairro -->
+        <div class="form-field district-field">
+          <label for="district">Bairro:</label>
+          <input type="text" name="district" id="district" placeholder="Digite seu nome">
+        </div>
+
+        <!-- Cidade -->
+        <div class="form-field city-field">
+          <label for="city">Cidade:</label>
+          <input type="text" name="city" id="city" placeholder="Digite seu nome">
+        </div>
+
+        <!-- Estado -->
+        <div class="form-field state-field">
+          <label for="state">Estado:</label>
+          <select name="state" id="state">
+            <option>Selecione um Estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option> 
+          </select>
+        </div>
+
+      </fieldset>
+
+      <!-- Diversos -->
+      <fieldset class="diverse-fieldset">
+        <legend>Diversos</legend>
+
+        <!-- Áreas de Interesse -->
+        <fieldset class="areas-interest-fieldset">
+          <legend>Áreas de Interesse</legend>
+
+          <div class="form-field">
+            <div class="checkbox-inputs">
+              <div>
+                <input type="checkbox" name="technology" id="technology" value="Tecnologia">
+                <label for="technology">Tecnologia</label>
+              </div>
+              
+              <div>
+                <input type="checkbox" name="sports" id="sports" value="Esportes">
+                <label for="sports">Esportes</label>
+              </div>
+              
+              <div>
+                <input type="checkbox" name="others" id="others" value="Outros">
+                <label for="others">Outros</label>
+              </div>
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <!-- Cor de Preferência -->
+        <fieldset class="preferred-color-fieldset">
+          <legend>Cor de Preferência</legend>
+
+          <div class="preferred-color preferred-color-selected"><div></div></div>
+          
+        </fieldset>
+
+      </fieldset>
+
+      <div class="buttons buttons-group">
+        <input class="button button-cancel"  type="button" value="Cancelar">
+        <input class="button button-submit"  type="button" value="Enviar">
+      </div>
+
+    </form>
+    
+  </main>
+ 
+ <script src="script.js"></script>
+</body>
+</html>
